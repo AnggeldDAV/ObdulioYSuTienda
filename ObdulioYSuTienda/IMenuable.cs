@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace ObdulioYSuTienda
 {
-    public class IMenuable
+    public interface IMenuable
     {
-        public void DameMenu()
-        {
-}
+        public void DameMenu();
     }
 }

@@ -9,15 +9,22 @@ namespace ObdulioYSuTienda
 {
     public class OrdenadorLentorro : IVendible
     {
-        public int Precio = 100;
-        public int TiempoGarantia = 2;
+        public int Precio {get;set;}
+        public int TiempoGarantia { get; set; }
+
+        public OrdenadorLentorro(int precio = 100, int tiempoGarantia = 2)
+        {
+            this.Precio = precio;
+            this.TiempoGarantia = tiempoGarantia;
+        }
+
         public double TiempoMedio()
         {
             return Precio / TiempoGarantia;
         }
         public override string ToString()
         {
-            return $"Ordenador lentorro de precio {Precio} y Tiempo de garantia {TiempoGarantia}. Tiempo medio {TiempoMedio()}";
+            return $"{this.GetType().Name}, {this.Precio}, {this.TiempoGarantia}, {this.TiempoMedio()}";
         }
     }
 }

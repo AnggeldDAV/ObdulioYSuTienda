@@ -8,6 +8,7 @@ namespace ObdulioYSuTienda
 {
     public interface IFactoria
     {
-       public IVendible Vendible(TipoOrdenador tipo);
+        public IVendible Vendible(TipoOrdenador tipo, int precio, int tiempoGarantia);
+        public void Mostrable();
     }
 }

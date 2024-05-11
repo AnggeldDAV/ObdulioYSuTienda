@@ -8,15 +8,22 @@ namespace ObdulioYSuTienda
 {
     public class OrdenadorGamer : IVendible
     {
-        public int Precio = 1000;
-        public int TiempoGarantia = 4;
+        public int Precio { get; set; }
+        public int TiempoGarantia { get; set; }
+
+        public OrdenadorGamer(int precio = 1000, int tiempoGarantia = 4)
+        {
+            this.Precio = precio;
+            this.TiempoGarantia = tiempoGarantia;
+        }
+
         public double TiempoMedio()
         {
             return Precio / TiempoGarantia;
         }
         public override string ToString()
         {
-            return $"Ordenador Gamer de precio {Precio} y Tiempo de garantia {TiempoGarantia}. Tiempo medio {TiempoMedio()}";
+            return $"{this.GetType().Name}, {this.Precio}, {this.TiempoGarantia}, {this.TiempoMedio()}";
         }
     }
 }

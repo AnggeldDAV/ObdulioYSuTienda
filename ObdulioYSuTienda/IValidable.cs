@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace ObdulioYSuTienda
 {
-    public interface IVendible
+    public interface IValidable
     {
-        public int Precio { get; set; }
-        public int TiempoGarantia { get; set; }
-        public double TiempoMedio();
+        public bool IsValid(int Precio, int TiempoGarantia);
     }
 }
