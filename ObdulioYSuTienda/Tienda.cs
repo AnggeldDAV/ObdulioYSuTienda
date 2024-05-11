@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-    //• Numero de ordenadores que tienen un precio superior a 125.
 namespace ObdulioYSuTienda
 {
     public class Tienda : IListable
