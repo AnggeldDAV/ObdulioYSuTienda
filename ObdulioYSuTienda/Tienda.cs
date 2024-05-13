@@ -23,7 +23,7 @@ namespace ObdulioYSuTienda
         }
         public int Count()
         {
-            return this.Ventas.Count();
+            return Ventas.Count();
         }
         public int DameOrdenadorMasBarato()
         {
