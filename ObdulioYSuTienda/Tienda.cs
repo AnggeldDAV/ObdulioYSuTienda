@@ -69,7 +69,9 @@ namespace ObdulioYSuTienda
         }
         public void Muestra()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Lista:");
+            Console.ForegroundColor = ConsoleColor.White;
             foreach (IVendible obj in Ventas) {
                 Console.WriteLine(obj);
             }
