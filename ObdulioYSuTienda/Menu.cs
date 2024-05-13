@@ -17,14 +17,17 @@ namespace ObdulioYSuTienda
             
              Factoria.Mostrable();
         }
+        public static void DameMensajes() {
+            Console.WriteLine($"Pulsa 1 si quieres crear ordenador Lentorro \n" +
+            $"Pulsa 2 si quieres crear ordenador Normal \n" +
+            $"Pulsa 3 si quieres crear ordenador Gamer \n" +
+            $"Pulsa 4 si quieres mostrar una lista de los ordenadores vendidos \n \n" +
+            $"Si pulsas otro numero se cerrara el programa");
+        }
         public void DameMenu()
         {
             
-            Console.WriteLine($"Pulsa 1 si quieres crear ordenador Lentorro \n" +
-                $"Pulsa 2 si quieres crear ordenador Normal \n" +
-                $"Pulsa 3 si quieres crear ordenador Gamer \n" +
-                $"Pulsa 4 si quieres mostrar una lista de los ordenadores vendidos \n \n" +
-                $"Si pulsas otro numero se cerrara el programa");
+            DameMensajes();
 
             int numeroPulsado = Int32.Parse(Console.ReadLine()!);
             while (numeroPulsado == 1 | numeroPulsado == 2 | numeroPulsado == 3 || numeroPulsado == 4)
@@ -49,11 +52,7 @@ namespace ObdulioYSuTienda
                         Console.WriteLine($"\n");
                         break;
                 }
-                Console.WriteLine($"Pulsa 1 si quieres crear ordenador Lentorro \n" +
-                    $"Pulsa 2 si quieres crear ordenador Normal \n" +
-                    $"Pulsa 3 si quieres crear ordenador Gamer \n" +
-                    $"Pulsa 4 si quieres mostrar una lista de los ordenadores vendidos \n \n" +
-                    $"Si pulsas otro numero se cerrara el programa");
+                DameMensajes();
                 numeroPulsado = Int32.Parse(Console.ReadLine()!);
             }
             Console.WriteLine($"\n\nSaliendo del programa");
