@@ -11,7 +11,6 @@ namespace ObdulioYSuTienda
 {
     public class Menu : IMenuable
     {
-        public int numeroPulsado;
         public IFactoria Factoria = new Factoria01();
         public void Listado()
         {
@@ -31,7 +30,7 @@ namespace ObdulioYSuTienda
         {
             
             DameMensajes();
-            
+            int numeroPulsado;
             Int32.TryParse(Console.ReadLine()!, out numeroPulsado);
             while (numeroPulsado == 1 | numeroPulsado == 2 | numeroPulsado == 3 || numeroPulsado == 4)
             {
