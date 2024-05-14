@@ -11,6 +11,7 @@ namespace ObdulioYSuTienda
 {
     public class Menu : IMenuable
     {
+        public int numeroPulsado;
         public IFactoria Factoria = new Factoria01();
         public void Listado()
         {
@@ -30,8 +31,8 @@ namespace ObdulioYSuTienda
         {
             
             DameMensajes();
-
-            int numeroPulsado = Int32.Parse(Console.ReadLine()!);
+            
+            Int32.TryParse(Console.ReadLine()!, out numeroPulsado);
             while (numeroPulsado == 1 | numeroPulsado == 2 | numeroPulsado == 3 || numeroPulsado == 4)
             {
                 switch (numeroPulsado)
@@ -39,7 +40,7 @@ namespace ObdulioYSuTienda
                     case 1:
                         Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine($"Creado ordenador Lentorro: {(Factoria.Vendible(TipoOrdenador.Lentorro, 0, 0))}\n");
+                        Console.WriteLine($"Creado ordenador Lentorro: {(Factoria.Vendible(TipoOrdenador.Lentorro,0,0))}\n");
                         Console.ForegroundColor = ConsoleColor.White;
                         break;
                     case 2:
@@ -61,7 +62,7 @@ namespace ObdulioYSuTienda
                         break;
                 }
                 DameMensajes();
-                numeroPulsado = Int32.Parse(Console.ReadLine()!);
+                Int32.TryParse(Console.ReadLine()!, out numeroPulsado);
             }
             Console.WriteLine($"\n\nSaliendo del programa");
         }
